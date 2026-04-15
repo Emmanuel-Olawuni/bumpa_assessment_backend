@@ -29,4 +29,20 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+    public function purchases()
+    {
+        return $this->hasMany(Purchase::class);
+    }
+
+    public function achievements()
+    {
+        return $this->belongsToMany(Achievement::class, 'user_achievements')
+            ->withTimestamps()
+            ->withPivot('unlocked_at');
+    }
+
+    public function currentBadge()
+    {
+        return $this->belongsTo(Badge::class, 'current_badge_id');
+    }
 }
