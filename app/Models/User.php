@@ -45,4 +45,8 @@ class User extends Authenticatable
     {
         return $this->belongsTo(Badge::class, 'current_badge_id');
     }
+    public function completedPurchasesCount(): int
+    {
+        return $this->purchases()->where('status', 'completed')->count();
+    }
 }

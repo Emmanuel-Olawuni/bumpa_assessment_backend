@@ -16,4 +16,12 @@ class Purchase extends Model
     {
         return $this->belongsTo(User::class);
     }
+    protected static function booted(): void
+    {
+        static::created(function (Purchase $purchase) {
+            if ($purchase->status === 'completed') {
+                PurchaseCompleted::dispatch($purchase);
+            }
+        });
+    }
 }
