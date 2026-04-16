@@ -47,8 +47,8 @@ Each component has a single responsibility. The `Purchase` model doesn't know ab
 
 ```bash
 # Clone the repository
-git clone <repo-url>
-cd
+git clone https://github.com/Emmanuel-Olawuni/bumpa_assessment_backend.git
+cd bumpa_assessment_backend
 
 # Install PHP dependencies
 composer install
