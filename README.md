@@ -58,12 +58,12 @@ cp .env.example .env
 php artisan key:generate
 
 # Database setup — configure your .env with MySQL credentials:
-# DB_CONNECTION=mysql
-# DB_HOST=127.0.0.1
-# DB_PORT=3306
-# DB_DATABASE=bumpa_loyalty
-# DB_USERNAME=root
-# DB_PASSWORD=
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=bumpa_loyalty
+DB_USERNAME=root
+DB_PASSWORD=
 
 # Create the database, then run migrations
 php artisan migrate
