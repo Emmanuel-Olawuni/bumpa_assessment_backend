@@ -79,7 +79,7 @@ php artisan serve
 
 Run the PHP test
 ```bash
-php artisan test --filter=BumpaLoyaltyTest; 
+php artisan test --filter=BumpaLoyaltyTest
 ```
 
 The API will be available at `http://localhost:8000`.
