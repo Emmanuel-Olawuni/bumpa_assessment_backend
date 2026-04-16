@@ -57,22 +57,29 @@ composer install
 cp .env.example .env
 php artisan key:generate
 
-# Database setup — configure your .env with MySQL credentials:
-DB_CONNECTION=mysql
-DB_HOST=127.0.0.1
-DB_PORT=3306
-DB_DATABASE=bumpa_loyalty
-DB_USERNAME=root
-DB_PASSWORD=
+# Database setup — update these values in your .env file:
+# DB_CONNECTION=mysql
+# DB_HOST=127.0.0.1
+# DB_PORT=3306
+# DB_DATABASE=bumpa_loyalty
+# DB_USERNAME=root
+# DB_PASSWORD=
 
-# Create the database, then run migrations
+# Create the database in MySQL, then run migrations
 php artisan migrate
+
 
 # Seed demo data
 php artisan db:seed --class=Database\\Seeders\\LoyaltyProgramSeeder
 
 # Start the server
 php artisan serve
+
+```
+
+Run the PHP test
+```bash
+php artisan test --filter=BumpaLoyaltyTest; 
 ```
 
 The API will be available at `http://localhost:8000`.
