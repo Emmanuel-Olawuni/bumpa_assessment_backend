@@ -234,11 +234,6 @@ php artisan test --filter=BumpaLoyaltyTest
 
 ---
 
-## Frontend Setup
-
-See the `frontend/` directory README for React dashboard setup instructions.
-
----
 
 ## Tech Stack
 
